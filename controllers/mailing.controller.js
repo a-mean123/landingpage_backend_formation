@@ -32,15 +32,15 @@ const sendEmail = async (emailObject, res) => {
         secure: false,
 
         auth: {
-            user: process.env.EMAIL,
-            pass: process.env.EMAIL_PASS,
+            user: 'yo.yolioteam@gmail.com',
+            pass: 'xpivwjfczizmvasq',
         },
     });
 
     let mailOptions = {
         from: {
             name: 'YOLIO CAREER',
-            address: process.env.EMAIL
+            address: 'yo.yolioteam@gmail.com'
         },
 
         to: emailObject.destination,
