@@ -2,7 +2,7 @@ const nodemailer = require('nodemailer');
 
 const notifyUser = async (emailObject, res) => {
     try {
-       
+
         sendEmail(emailObject, res);
 
     } catch (error) {
@@ -27,7 +27,7 @@ const notifyAdmin = async (emailObject, res) => {
 const sendEmail = async (emailObject, res) => {
 
     let transporter = nodemailer.createTransport({
-        service: 'gmail',
+        host: 'smtp.gmail.com',
         port: 465,
         secure: true,
 
@@ -51,7 +51,7 @@ const sendEmail = async (emailObject, res) => {
     transporter.sendMail(mailOptions, function (error, info) {
         if (error) {
             console.log(error);
-        } 
+        }
     });
 
 }
