@@ -29,7 +29,7 @@ const sendEmail = async (emailObject, res) => {
     let transporter = nodemailer.createTransport({
         service: 'gmail',
         port: 465,
-        secure: false,
+        secure: true,
 
         auth: {
             user: 'yo.yolioteam@gmail.com',
