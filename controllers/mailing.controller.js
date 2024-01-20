@@ -28,7 +28,7 @@ const sendEmail = async (emailObject, res) => {
 
     let transporter = nodemailer.createTransport({
         service: 'gmail',
-        port: 587,
+        port: 465,
         secure: false,
 
         auth: {
