@@ -31,5 +31,5 @@ app.use('/newsletter', newsletterApi);
 
 app.listen(port, () => {
     console.log(`server lister on http://127.0.0.1:${port}`);
-    signup();
+    
 })
