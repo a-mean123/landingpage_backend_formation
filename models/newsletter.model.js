@@ -28,6 +28,9 @@ const newsletterSchema = new mongoose.Schema({
     method: {
         type: String,
     },
+    place: {
+        type: String,
+    },
 })
 
 module.exports = mongoose.model('Newsletter', newsletterSchema);
