@@ -1,18 +1,16 @@
 const express = require('express');
 const cors = require('cors');
 
-require('dotenv').config();
+
 require('./config/connection');
 
 
 
 
-// admin signup function
-const { signup } = require('./controllers/admin.controller');
+
 const port = 3625;
 
 // import routes
-const adminApi = require('./routes/admin.route');
 
 const newsletterApi = require('./routes/newsletter.route');
 
@@ -25,7 +23,7 @@ app.get('/', (req, res) => res.json({ message: 'server work!' }))
 
 
 // use routes
-app.use('/admin', adminApi);
+
 app.use('/newsletter', newsletterApi);
 
 
